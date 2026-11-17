@@ -1,10 +1,10 @@
 # Delivery Goal: Evergreen Quote
 
-> Copy this file into `delivery-leadership-package/delivery-goal.md`. One sentence. Read it back to yourself. Then to your pair. Then to someone who wasn't in the room. If they can repeat it, it's good.
+
 
 ## Goal
 
-> _One sentence here._
+By Thursday EOD, the wired Evergreen Quote app saves quotes that survive a reload, the containerized API has run on the local cluster, and the launch is merged to main via a reviewed PR with both CI jobs green.
 
 ## "Done" looks like
 
@@ -18,4 +18,7 @@
 
 ## Out of scope (this week)
 
-- _What you are intentionally not doing._
+- - Redesigning the entire insurance product or business model.
+- Building a full customer account or policy-management system.
+- Adding coverage types or underwriting rules beyond the launch requirements.
+- Not deploying to AWS (except for the optional Thursday cloud window if the instructor opens it).

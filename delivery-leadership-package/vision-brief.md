@@ -6,8 +6,8 @@
 **Name:** Evergreen Insurance Quote (the launch: full-stack delivery)
 **Delivery week:** Final
 **Delivery Lead:** Patricia Mengi
-**Engineering team (represented by):** _link to your Evergreen Quote project repo_
-**GitHub Project board:** _link_
+**Engineering team (represented by):** 
+**GitHub Project board:** https://github.com/users/asc1-student09/projects/5/views/1?layout_template=board
 
 ## Who is the customer?
 
