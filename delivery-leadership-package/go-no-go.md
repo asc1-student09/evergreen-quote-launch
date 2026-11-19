@@ -21,7 +21,7 @@
 ## What "GO" means
 
 - Proceed with Friday’s live demo on the local `evergreen` cluster.
-- On Day 4, review the pull request and confirm both CI jobs pass before squash-merging `delivery/lead` into `main`. Delete the branch and tag the merge commit `launch`.
+- On Day 4, review the pull request and confirm both CI jobs pass before squash-merging `delivery/lead` into `main`. Delete the merged branch.
 
 ## What would trigger a "NO-GO"
 

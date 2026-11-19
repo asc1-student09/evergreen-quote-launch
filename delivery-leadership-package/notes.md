@@ -10,6 +10,10 @@ The API serves six quotes from MongoDB (IDs `q1`–`q6`). The website shows five
 
 The client estimated $425.00/month for Auto coverage, age 35, and $50,000 in coverage. The API uses a different rate table. The sponsor directed me to align the client rates to the API rates.
 
+### Journey check
+
+The Phase 1 landing page explained the offer and directed a visitor to the quote app. Opening it in Live Server on Day 1 reproduced that experience. The React app still used sample data, so saving a quote did not survive a refresh.
+
 ## Day 2 (Tue): Observations
 
 ### 1. Client and API connected
@@ -77,3 +81,13 @@ Thanks for flagging the recent-quotes error. Friday’s demo is still on track u
 ### Journey check
 
 The client kept sending API requests through the Vite proxy to port `3000`. The dev server and standalone Docker container each listened there. For Kubernetes, port forwarding connected that same local port to the Kubernetes Service. The API kept the same routes and response format, so the client worked without a code change. Phase 3’s API and MongoDB work built the service and its storage. Docker packaged the API, and Kubernetes ran three copies behind one Service.
+
+## Day 4 (Thu): Release verification and cloud deployment
+
+I built and previewed the production client and confirmed it loaded the saved $700/month Life quote from local Kubernetes. All seven API tests passed. I reviewed and squash-merged [PR #11](https://github.com/asc1-student09/evergreen-quote-launch/pull/11), then verified that both [CI jobs passed on main](https://github.com/asc1-student09/evergreen-quote-launch/actions/runs/44532674190).
+
+In the optional AWS lab, I pushed the API image to ECR and deployed it to EKS. I saved a sample Auto quote through the client and retrieved it through the AWS load balancer at $450/month. I removed the EKS cluster and ECR repository, restored the local image reference, and verified the local Kubernetes pods were healthy for the showcase.
+
+### Journey check
+
+The file I’d show my manager is [the risk register](risk-register.md). It shows how I learned to spot blind spots early, give each risk an owner, and agree on when to act while we still have options.

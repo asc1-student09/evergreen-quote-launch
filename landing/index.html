@@ -16,7 +16,6 @@
     </nav>
   </header>
 
-  <!-- CONFIG: launch banner text (Day 2 - replace CHANGEME with the sponsor's launch line) -->
   <div class="launch-banner" role="region" aria-label="Evergreen Quote launch announcements">
     <div class="launch-banner-track">
       <span class="launch-banner-line">Get an instant estimate.</span>
@@ -30,8 +29,7 @@
     <section class="hero">
       <h1>Coverage that grows with you</h1>
       <p class="tagline">Auto, home, and life coverage with an instant estimate. No account, no phone call, no waiting.</p>
-      <!-- CONFIG: get-a-quote link (Day 2 - point this at the running quote app) -->
-      <a class="cta" href="http://localhost:5173/">Get your quote</a>
+      <a class="cta" data-local-quote="Get your quote" href="https://github.com/asc1-student09/evergreen-quote-launch#run-it">See how to run the quote app</a>
     </section>
 
     <section id="coverage" class="features">
@@ -65,12 +63,21 @@
       <h2>Ready when you are</h2>
       <p>The quote takes less than a minute.</p>
       <!-- The button below shares the CONFIG link above; set both on Day 2. -->
-      <a class="cta" href="CHANGEME">Start your quote</a>
+      <a class="cta" data-local-quote="Start your quote" href="https://github.com/asc1-student09/evergreen-quote-launch#run-it">See how to run the quote app</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 Evergreen Insurance. Sample training project.</p>
   </footer>
+  <script>
+    const isLocal = ["localhost", "127.0.0.1", "::1", "[::1]"].includes(window.location.hostname);
+    if (isLocal) {
+      for (const link of document.querySelectorAll("[data-local-quote]")) {
+        link.href = "http://localhost:5173/";
+        link.textContent = link.dataset.localQuote;
+      }
+    }
+  </script>
 </body>
 </html>

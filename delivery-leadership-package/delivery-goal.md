@@ -18,7 +18,7 @@ By Thursday EOD, the wired Evergreen Quote app saves quotes that survive a reloa
 
 ## Out of scope (this week)
 
-- - Redesigning the entire insurance product or business model.
+- Redesigning the entire insurance product or business model.
 - Building a full customer account or policy-management system.
 - Adding coverage types or underwriting rules beyond the launch requirements.
 - Not deploying to AWS (except for the optional Thursday cloud window if the instructor opens it).

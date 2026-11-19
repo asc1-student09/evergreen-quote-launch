@@ -11,10 +11,11 @@
 
 ## Slide 2: What shipped
 
-- **Screenshot** — Insert the production preview screenshot from `localhost:4173` showing the quote form and the $700/month Life quote under Recent quotes.
+- **Screenshot** — The PowerPoint includes the local production preview showing the quote form and the $700/month Life quote under Recent quotes.
 - **Merged PR** — [Pull request #11](https://github.com/asc1-student09/evergreen-quote-launch/pull/11)
-- **Green CI run** — [API tests and client type-check/build on main](https://github.com/asc1-student09/evergreen-quote-launch/commit/7e947cb529b7dd9f8f4a50f03436d029b8ff577f)
-- **Demo** — Open the landing page, click **Get your quote**, save a sample quote, and refresh to show it under **Recent quotes**. Use the local `evergreen` Kubernetes cluster for the live demo and the screenshots as the fallback.
+- **Green CI run** — [API tests and client type-check/build on main](https://github.com/asc1-student09/evergreen-quote-launch/actions/runs/44532674190)
+- **AWS evidence** — The AWS load balancer returned the $450/month Auto quote saved on EKS. EKS and ECR cleanup were verified.
+- **Optional live demo** — Open the landing page, click **Get your quote**, save a sample quote, and refresh to show it under **Recent quotes**. Use the local `evergreen` Kubernetes cluster for the live demo and the screenshots as the fallback.
 
 ## Slide 3: Two key decisions
 
@@ -27,7 +28,17 @@
 - **Inject #1 (Tue)** — The sponsor requested a life-first experience and Renters coverage. I approved the landing-page copy, routed the form-default change to engineering, and deferred Renters because it would change validation in both the client and API.
 - **Inject #2 (Wed)** — The shared demo API pods restarted after a database configuration change. I asked the platform team to confirm the mismatch, restore the expected setting, and provide an ETA. I called **GO for Friday’s local demo** based on the local cluster health check, the saved quote that survived a refresh, and green CI.
 
-## Slide 5: What three phases built
+## Slide 5: Difficulties I faced and how I handled them
+
+- Fixed the client/API field mismatch using the TypeScript error.
+- Used the lab fallback when MongoDB image import failed and cleared the local port conflict before verifying the API connection.
+
+## Slide 6: AI use and skills growth
+
+- Used GitHub Copilot and ChatGPT for suggestions and troubleshooting. Reviewed their output and verified the results.
+- The PowerPoint includes proposed contribution estimates and before/after skill ratings for me to confirm.
+
+## Slide 7: What I’ll bring to the way I lead
 
 - **The journey** — Static landing page → typed React quote app → API backed by MongoDB → connected app with a containerized API running on Kubernetes.
 - **What I’ll take back to work on Monday** — The biggest lesson I’m taking back to Print Services is how much clarity we can create before the work begins. On my next project, I’ll make time at kickoff for us to talk through what could get in our way and agree on when we’ll act. As a leader, I want to give the team room to surface risks early and help them get decisions while we still have options.

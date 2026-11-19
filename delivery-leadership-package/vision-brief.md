@@ -1,6 +1,5 @@
 # Evergreen Quote: Vision Brief
 
-> Copy this file into `delivery-leadership-package/vision-brief.md` in your repo and fill it in. Target length: 1 page (~300 words). Write for a Liberty Mutual VP who has 90 seconds.
 
 ## Product
 **Name:** Evergreen Insurance Quote (the launch: full-stack delivery)
@@ -41,5 +40,3 @@ Uncertainty. The shopper cannot tell whether the price they see is real, whether
 - The browser makes a real API call and the quote is persisted to the database.
 - The client and API both pass CI before the PR is merged.
 - The full stack is demo-ready and working end-to-end for Friday’s showcase.
-
-
