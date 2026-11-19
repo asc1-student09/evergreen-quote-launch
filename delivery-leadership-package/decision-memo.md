@@ -25,3 +25,7 @@ Customers should receive an instant estimate that matches the premium they are s
 ## What would change my mind
 
 If the website and saved premium disagree again before Friday, or if the approved rates change before launch, I would use Option B instead. The API is the authority, so making every estimate a server calculation would be safer than shipping a second possible wrong answer.
+
+## Day 3: Copilot review of sample quotes
+
+Copilot matched the existing quote format, used allowed coverage types, and supplied premiums as numbers. I would ship the rows only after correcting the premiums to match the API’s launch rates. I changed the Life quote from $210 to $1,050 per month and the Home quote from $270 to $2,700 per month. After those corrections, `npm run seed` loaded all eight quotes. Mongoose would reject an unsupported coverage type such as `renters` when the seed script runs. The client’s TypeScript check skips `seed.js`, and CI’s API tests cover the routes. Reviewing the rates caught pricing errors that could pass database validation.
