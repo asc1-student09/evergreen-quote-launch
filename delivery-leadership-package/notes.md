@@ -64,7 +64,7 @@ GitHub Actions passed the API tests with a clean test database and passed the cl
 
 ### 5. Inject #2 — Shared demo incident
 
-The shared demo API kept restarting, and the page could not load recent quotes. Its MongoDB pod was running. The deployment supplied `MONGO_URI`, while the API expected `MONGODB_URI`. My local `evergreen` cluster passed its health check, and a quote saved through that cluster was still visible after refreshing.
+The API pods on the shared demo cluster kept restarting. The logs show a connection refusal at `127.0.0.1:27017`, which means the API was trying to reach MongoDB inside its own pod. The shared cluster’s MongoDB pod was running. The deployment supplied `MONGO_URI`, while the API expected `MONGODB_URI`. My local `evergreen` cluster passed its health check, and a quote saved through that cluster was still visible after refreshing.
 
 **Draft to the platform team**
 
