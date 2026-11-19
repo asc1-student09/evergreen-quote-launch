@@ -18,6 +18,8 @@ await Quote.insertMany([
   { _id: "q4", type: "auto", age: 23, coverageAmount: 30000, monthlyPremium: 100.8, tags: ["young-driver"] },
   { _id: "q5", type: "home", age: 38, coverageAmount: 180000, monthlyPremium: 248.4, tags: ["renewal", "bundle"] },
   { _id: "q6", type: "auto", age: 67, coverageAmount: 40000, monthlyPremium: 96.0, tags: ["senior"] },
+  { _id: "q7", type: "life", age: 35, coverageAmount: 150000, monthlyPremium: 1050.0, tags: ["new"] },
+  { _id: "q8", type: "home", age: 44, coverageAmount: 200000, monthlyPremium: 2700.0, tags: ["renewal", "bundle"] },
 ]);
 
 const count = await Quote.countDocuments();

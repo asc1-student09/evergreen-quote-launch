@@ -1,6 +1,5 @@
 # Program Showcase: Evergreen Quote
 
-> Copy to `delivery-leadership-package/delivery-review-outline.md`. Five slides OR one page. Target: 5 minutes spoken, then 3 minutes of questions. Your audience on Friday afternoon includes your managers; assume they have not seen the program from the inside.
 
 ## Slide 1: Delivery goal & did we hit it?
 

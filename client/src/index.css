@@ -1,12 +1,14 @@
 :root {
   /* Liberty Mutual blue carried over from the Phase 1 brand refresh */
-  --primary: #0066b2;
-  --primary-dark: #00497f;
-  --text: #1c2b36;
-  --muted: #5b6b78;
+  --primary: #0f5132;
+  --primary-dark: #0b3d26;
+  --text: #1f2a2e;
+  --muted: #6a7a72;
   --surface: #ffffff;
-  --page-bg: #f4f7fa;
-  --border: #d7e0e8;
+  --page-bg: #f7f4ed;
+  --border: #ddd8ce;
+  --sage: #e6f0ea;
+  --focus: #b45309;
   --form-padding: 24px;
 }
 
@@ -87,6 +89,7 @@ body {
   display: block;
   margin: 14px 0 4px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .quote-form select,
@@ -98,13 +101,20 @@ body {
   font-size: 1rem;
 }
 
+.quote-form select:focus,
+.quote-form input:focus,
+.primary-btn:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
 .estimate {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin: 20px 0 8px;
   padding: 14px 16px;
-  background: #eef5fb;
+  background: var(--sage);
   border-radius: 8px;
 }
 
@@ -126,7 +136,7 @@ body {
 }
 
 .message.success {
-  color: #1b7f43;
+  color: var(--primary);
 }
 
 .primary-btn {
